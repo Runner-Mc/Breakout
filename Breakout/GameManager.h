@@ -12,7 +12,7 @@
 
 class GameManager {
 public:
-    GameManager(sf::RenderWindow* window);
+    GameManager(sf::RenderWindow* window, sf::RenderWindow& windRef);
     void initialize();
     void update(float dt);
     void loseLife();
@@ -40,6 +40,7 @@ private:
     sf::Text _masterText;
 
     sf::RenderWindow* _window;
+    sf::RenderWindow& _windRef;
     Paddle* _paddle;
     Ball* _ball;
     BrickManager* _brickManager;
